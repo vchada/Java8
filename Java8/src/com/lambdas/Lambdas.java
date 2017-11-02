@@ -10,20 +10,11 @@ import java.util.stream.IntStream;
 public class Lambdas 
 {
 
-	private static boolean isPrime(int number) 
-	{
-		IntPredicate isDivisible = index -> number % index == 0;
-		
-		return number > 1
-				&& IntStream.range(2, number).noneMatch(
-						isDivisible);
-	}
 	
 	public static void main(String[] args) 
 	{
-		System.out.println("Hello World");
-		System.out.println(isPrime(7));
-		// Introducing Lambdas...
+		System.out.println("Introduction to lambadas in Java 8..");
+
 		  List<String> names1 = new ArrayList<String>();
 	      names1.add("Mahesh ");
 	      names1.add("Suresh ");
@@ -50,18 +41,22 @@ public class Lambdas
 	   }
 	   
 	   //sort using java 7
-	   private void sortUsingJava7(List<String> names) {   
-	      Collections.sort(names, new Comparator<String>() {
+	   private void sortUsingJava7(List<String> names) 
+	   {   
+	      Collections.sort(names, new Comparator<String>() 
+	      {
 	         @Override
-	         public int compare(String s1, String s2) {
+	         public int compare(String s1, String s2) 
+	         {
 	            return s1.compareTo(s2);
 	         }
 	      });
 	   }
 	   
 	   //sort using java 8
-	   private void sortUsingJava8(List<String> names) {
-	      Collections.sort(names, (s1, s2) -> s1.compareTo(s2));
+	   private void sortUsingJava8(List<String> names) 
+	   {
+	      Collections.sort(names, (s1, s2) -> s1.compareTo(s2));// inline function execution
 	   }
 		
 
